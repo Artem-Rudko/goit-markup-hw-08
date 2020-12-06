@@ -1,8 +1,8 @@
 .hero {
     max-width: 1600px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -11,18 +11,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+    }
 }
 
 .hero-title {
-    @include font-param(44px, 1.36, 900, 0.06em);
-    // font-weight: 900;
-    // font-size: 44px;
-    // line-height: 1.36;
-    // letter-spacing: 0.06em;
-
+    @include font-param (26px, 1.62, 900, 0.06em);
+   
     text-transform: uppercase;
     color: $bgc-main;
 
     margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop){
+        @include font-param (44px, 1.36, 900, 0.06em);
+    }
 }
 

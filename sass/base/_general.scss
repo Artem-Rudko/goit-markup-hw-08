@@ -29,38 +29,70 @@ ul {
 
 img {
     display: block;
+    width: 100%;
 }
 
 .container {
-    width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-right: auto;
     margin-left: auto;
+    // background-color: lightsteelblue;
+    // background-color: goldenrod;
+    outline: 1px solid darkblue;
     
+    @media (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
     header & {
-        padding-top: 24px;
-        padding-bottom: 25px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        @media (min-width: $tablet) {
+            padding-top: 21px;
+            padding-bottom: 21px;
+        }
+
+        @media (min-width: $desktop) {
+            padding-top: 24px;
+            padding-bottom: 25px;
+        }
     }
     
     footer & {
-        padding-top: 60px;
         padding-bottom: 60px;
+        padding-top: 60px;
     }
 }
     
-.container-flex {
-    display: flex;
-    flex-direction: row;
-}
+// .container-flex {
+//     display: flex;
+//     flex-direction: row;
+// }
 
 .section-title {
-    @include font-param(36px, 1.167, 700);
+    @include font-param(28px, 1.18, 700);
     text-align: center;
     color: $main-color;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+        @include font-param(36px, 1.167, 700);
+        margin-bottom: 50px;
+    }
 } 
 
 .visually-hidden {

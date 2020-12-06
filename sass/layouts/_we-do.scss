@@ -1,6 +1,15 @@
+.we-do {
+    
+    @media screen and (max-width: #{$desktop - 1px}){
+        display: none;
+    }
+
+}
+
 .we-do .list {
     display: flex;
     justify-content: space-between;
+
 }
 
 .we-do-thumb {

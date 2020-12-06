@@ -1,13 +1,47 @@
 .advantages .container {
-    padding-bottom: 0;
-    padding-top: 94px;
+    
+    
+    @media screen and (min-width: $desktop){
+        padding-bottom: 0;
+        // padding-top: 94px;
+    }
 }
 
 .advantages-list {
-    display: flex;
+
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1px})  {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin: 0 -15px;
+    }
 }
 
 .advantages-list-item {
+    display: inline-block;
+    outline: 1px solid maroon;
+    
+    &:not(:last-child) {
+        @media screen and (max-width: #{$tablet - 1px}) {
+        margin-bottom: 30px;
+    }
+
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1px}) {
+        flex-basis: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 4 * 30px) / 4);
+        margin: 0 15px;       
+
+    }
 
     &::before {
         content: '';
@@ -21,9 +55,6 @@
         background-color: $button-bgc-color;
     }
 
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
 
     &:nth-child(1)::before {
         background-image: url(../images/antenna.svg);
@@ -47,8 +78,22 @@
     text-transform: uppercase;
     color: $main-color;
     margin-bottom: 10px;
+    
+    @media screen and (max-width: #{$tablet - 1px}) {
+        text-align: center;
+    }
 }
 
 .list-desсription {
     line-height: 1.714;
+    margin-bottom: 0;
+    
+    // &:not(last-child) {
+    //     margin-bottom: 0;
+    // }
 }
+
+.list-advantages {
+    margin-bottom: 10px;
+}
+
