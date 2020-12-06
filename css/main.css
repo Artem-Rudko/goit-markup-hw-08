@@ -195,8 +195,46 @@ footer .container {
   background-color: #2196F3;
 }
 
+.mobile-menu-container {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
+  display: none;
+  background-color: #ffffff;
+  text-align: center;
+  z-index: 10;
+  font-size: 18px;
+  line-height: 1.16;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 60px 0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.mobile-menu-container.is-open {
+  display: block;
+}
+
+.mobile-menu-container .list:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.mobile-site-nav .item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-contacts .link {
+  color: #757575;
+}
+
+.mobile-contacts .item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 header {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .header-nav {
@@ -883,6 +921,7 @@ footer .social-icons-link:hover, footer .social-icons-link:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
