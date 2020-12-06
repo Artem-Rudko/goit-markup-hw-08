@@ -14,14 +14,13 @@
     }
 }
 
-
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     /* display: flex; */
-    width: 528px;
+    width: 450px;
     padding: 40px;
     @include transition(transform);
     background-color: $bgc-main;
@@ -30,6 +29,14 @@
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    & .modal-label-agreement {
+        @include font-param(12px, 1.16, 400, 0.02em);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
     }
 }
 

@@ -1,15 +1,46 @@
 .main-nav {
     display: flex;
-    
-    .logo.link {
-        margin-right: 93px;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.site-nav,
+.contacts {
+    display: none;
+}
+
+@media screen and (min-width: $tablet) {
+    .main-nav {
+        flex-grow: 0;
     }
     
-    .site-nav {
+    .site-nav  {
         display: flex;
         align-items: center;
     }
+    
+    .logo.link {
+        margin-right: 88px;
+    }
+    
+    .contacts {
+        display: inline;
+    } 
 }
+
+@media screen and (min-width: $desktop) {
+    .logo.link {
+        margin-right: 93px;
+    }
+    .contacts {
+        display: flex;
+    } 
+    .contacts .item:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
 
 .site-nav .item {
     position: relative;

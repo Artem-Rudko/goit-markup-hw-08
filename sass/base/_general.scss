@@ -43,7 +43,7 @@ img {
     // background-color: goldenrod;
     outline: 1px solid darkblue;
     
-    @media (min-width: $mobile) {
+    @media screen and (min-width: $mobile) {
         width: $mobile;
     }
 
@@ -55,21 +55,6 @@ img {
         width: $desktop;
         padding-top: 94px;
         padding-bottom: 94px;
-    }
-
-    header & {
-        padding-top: 16px;
-        padding-bottom: 16px;
-
-        @media (min-width: $tablet) {
-            padding-top: 21px;
-            padding-bottom: 21px;
-        }
-
-        @media (min-width: $desktop) {
-            padding-top: 24px;
-            padding-bottom: 25px;
-        }
     }
     
     footer & {

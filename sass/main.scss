@@ -1,13 +1,13 @@
 @import './utils/variables';
 @import './utils/mixin';
 @import './base/general';
-// @import './components/logo';
-// @import './components/menu';
-// @import './layouts/header';
-// @import './components/contacts';
-// @import './components/address';
+@import './components/logo';
+@import './components/menu';
+@import './layouts/header';
+@import './components/contacts';
+@import './components/address';
 @import './components/button';
-// @import './layouts/footer';
+@import './layouts/footer';
 
 @import './layouts/hero';
 @import './layouts/advantages';
@@ -16,6 +16,6 @@
 @import './components/social-icons';
 @import './layouts/partners';
 @import './layouts/projects-set';
-// @import './components/modal';
-// @import './components/forms';
+@import './components/modal';
+@import './components/forms';
 
