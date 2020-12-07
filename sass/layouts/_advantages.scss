@@ -23,7 +23,7 @@
 
 .advantages-list-item {
     display: inline-block;
-    outline: 1px solid maroon;
+    // outline: 1px solid maroon;
     
     &:not(:last-child) {
         @media screen and (max-width: #{$tablet - 1px}) {

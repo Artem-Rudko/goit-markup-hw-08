@@ -20,7 +20,7 @@
         align-items: center;
     }
     
-    .logo.link {
+    header .logo.link {
         margin-right: 88px;
     }
     
@@ -30,7 +30,7 @@
 }
 
 @media screen and (min-width: $desktop) {
-    .logo.link {
+    header .logo.link {
         margin-right: 93px;
     }
     .contacts {
@@ -108,4 +108,12 @@
 
 .mobile-contacts .item:not(:last-child) {
     margin-bottom: 16px;
+}
+
+.contacts-footer-list {
+    font-style: normal;
+
+    & li:not(:last-child) {
+        margin-bottom: 8px;
+    }
 }

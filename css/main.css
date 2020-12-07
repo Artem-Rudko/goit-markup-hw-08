@@ -43,7 +43,6 @@ img {
   padding-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
-  outline: 1px solid darkblue;
 }
 
 @media screen and (min-width: 480px) {
@@ -140,7 +139,7 @@ footer .container {
     display: flex;
     align-items: center;
   }
-  .logo.link {
+  header .logo.link {
     margin-right: 88px;
   }
   .contacts {
@@ -149,7 +148,7 @@ footer .container {
 }
 
 @media screen and (min-width: 1200px) {
-  .logo.link {
+  header .logo.link {
     margin-right: 93px;
   }
   .contacts {
@@ -230,6 +229,14 @@ footer .container {
 
 .mobile-contacts .item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.contacts-footer-list {
+  font-style: normal;
+}
+
+.contacts-footer-list li:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 header {
@@ -470,17 +477,45 @@ footer .logo.link {
   margin-left: auto;
   text-align: center;
   background-color: #2F303A;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero.jpg");
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/mobile/hero@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/tablet/hero.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/tablet/hero@2x.jpg");
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
+    background-image: url("../images/hero.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero@2x.jpg");
   }
 }
 
@@ -526,7 +561,6 @@ footer .logo.link {
 
 .advantages-list-item {
   display: inline-block;
-  outline: 1px solid maroon;
 }
 
 @media screen and (max-width: 767px) {
@@ -670,7 +704,6 @@ footer .logo.link {
 }
 
 .team-member-item {
-  outline: 1px solid red;
   background-color: #ffffff;
   padding-bottom: 24px;
 }
